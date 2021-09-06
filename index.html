@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sendRequest()">发送请求</button>
+    <script>
+        const $ = require('jquery')
+        
+            var flag = 0;
+            
+            function sendRequest(){
+                console.log(flag)
+                if(flag == 1){
+                    return;
+                }else{
+                    flag = 1;
+                    $.ajax({
+                            url:'http://127.0.0.1:3000',
+                        type:'GET',
+                        timeout:5000,
+                        dataType:'text',
+                        success:function(data){
+                            flag = 0
+                            alert(data)
+                        },
+                        error:function(XHR){
+                            flag = 0
+                            console.log('error:'+XHR)
+                        }
+                    })  
+                }
+            
+
+            
+                        
+            }
+            
+               
+          
+        
+       
+       
+    </script>
+</body>
+</html>
