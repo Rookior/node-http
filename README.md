@@ -3,6 +3,7 @@
 
 `
   cd server 
+  
   node app.js
 `
 浏览器访问index.html访问本地http服务
