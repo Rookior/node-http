@@ -6,4 +6,9 @@
   node app.js
 ```
 
+```
+  cd server  
+  node api.js
+```
+
 浏览器访问index.html访问本地http服务
